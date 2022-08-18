@@ -1,0 +1,72 @@
+
+      <div class="page-wrapper">
+        <div class="page-breadcrumb">
+          <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+              <h4 class="page-title">Form Basic</h4>
+              <div class="ms-auto text-end">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      Library
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card">
+                <form class="form-horizontal" method="post" action="/subcategory/Edit_subcategory">
+                  <div class="card-body">
+                    <h4 class="card-title">Update Category Info</h4>
+                   
+                    
+                    <div class="form-group row">
+                      <label
+                        for="fname"
+                        class="col-sm-3 text-end control-label col-form-label" 
+                        >Select Category</label
+                      >
+                    <input type="hidden" value="<%= data.id %>" name="id">
+                      <div class="col-sm-9">
+                        <select name="Category_id" id="category" class="form-control">
+                            <option value="">--select Category--</option>
+                            <% for (subdata of subdata){%>
+                                <option value="<%= subdata.id %>" <% if(subdata.Category == data.Category_id.Category){%>  <%= 'selected' %><%} %> ><%= subdata.Category %></option>
+                            <%} %>
+                        </select>
+                      </div>z
+                    </div>
+                    <div class="form-group row">
+                        <label
+                        for="fname"
+                        class="col-sm-3 text-end control-label col-form-label" 
+                        >Sub Category</label
+                        >
+                        <div class="col-sm-9">
+                          <input
+                          type="text"
+                          class="form-control"
+                          id="Subcategory" name="Subcategory"
+                          placeholder="Enter Subcategory" value="<%= data.Subcategory %>"
+                        />
+                        </div>
+                      </div>
+                  <div class="border-top">
+                    <div class="card-body">
+                      <button type="submit" value="Submit" class="btn btn-primary">
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+          </div>
+          <!-- editor -->
+          </div>
+        </div>

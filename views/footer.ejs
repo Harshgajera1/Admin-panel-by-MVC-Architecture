@@ -1,0 +1,42 @@
+        <footer class="footer text-center">
+          All Rights Reserved by Matrix-admin. Designed and Developed by
+          <a href="https://www.wrappixel.com">WrapPixel</a>.
+        </footer>
+      </div>
+    </div>
+    <script src="/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="/extra-libs/sparkline/sparkline.js"></script>
+    <!--Wave Effects -->
+    <script src="/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="/js/custom.min.js"></script>
+    
+    <script src="/libs/flot/excanvas.js"></script>
+    <script src="/libs/flot/jquery.flot.js"></script>
+    <script src="/libs/flot/jquery.flot.pie.js"></script>
+    <script src="/libs/flot/jquery.flot.time.js"></script>
+    <script src="/libs/flot/jquery.flot.stack.js"></script>
+    <script src="/libs/flot/jquery.flot.crosshair.js"></script>
+    <script src="/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+    <script src="/js/pages/chart/chart-page-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js" integrity="sha512-lOrm9FgT1LKOJRUXF3tp6QaMorJftUjowOWiDcG5GFZ/q7ukof19V0HKx/GWzXCdt9zYju3/KhBNdCLzK8b90Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      <% if(flash.success.length >0 && flash.success){%>
+        new Noty({
+        theme: 'bootstrap-v3',
+        type: 'success',
+        layout: 'topCenter',
+        text: 'Some notification text',
+        timeout  : 1000
+        }).show();
+
+      <%} %>
+
+    </script>
+  </body>
+</html>

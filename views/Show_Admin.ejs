@@ -1,0 +1,67 @@
+
+      <div class="page-wrapper">
+        <div class="page-breadcrumb">
+          <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+              <h4 class="page-title">Tables</h4>
+              <div class="ms-auto text-end">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      Library
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title mb-0">Static Table</h5>
+                </div>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Password</th>
+                      <th>Gender</th>
+                      <th>Hobby</th>
+                      <th>City</th>
+                      <th>Description</th>
+                      <th>Image</th>
+                      <th>Delete</th>
+                      <th>Update</th>
+                    </tr>
+                  </thead>
+                 
+                  <tbody>
+                     <% for(var data of Admin_record){%>
+                        <tr>
+                            <td><%= data.Name%></td>
+                            <td><%= data.Email%></td>
+                            <td><%= data.Password%></td>
+                            <td><%= data.Gender%></td>
+                            <td><%= data.Hobby%></td>
+                            <td><%= data.City%></td>
+                            <td><%= data.Description %></td>
+                            <td><img src="<%= data.Image%>" height="100"></td>
+                            <td><a href="/Admin_delete/<%=data.id%>">Delete</a></td>
+                            <td><a href="/Admin_update/?id=<%=data.id%>">Update</a></td>
+                        </tr>
+                    <%} %>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+
+
+
