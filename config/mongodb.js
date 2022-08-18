@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/adminpanel2');
+mongoose.connect('mongodb://localhost/adminpanel');
 
 const db = mongoose.connection;
 db.on('error',console.error.bind(console,'database not connect'))
